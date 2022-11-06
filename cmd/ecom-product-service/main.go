@@ -19,7 +19,7 @@ func main() {
 	}
 
 	// serve server
-	log.Fatal(a.FiberApp.Listen(":8020"))
+	log.Fatal(a.FiberApp.Listen(config.ServerURL))
 }
 
 // InitAPI initialize API

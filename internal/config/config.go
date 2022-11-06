@@ -20,6 +20,7 @@ var (
 	JWTSecretKey     string
 	JWTSigningMethod *jwt.SigningMethodHMAC
 
+	ServerURL         string
 	FrontendURL       string
 	AccountServiceURL string
 
@@ -46,6 +47,7 @@ func InitConfig() error {
 	JWTSecretKey = os.Getenv("ECOM_PRODUCT_SERVICE_JWT_SECRET_KEY")
 	JWTSigningMethod = jwt.SigningMethodHS256
 
+	ServerURL = os.Getenv("ECOM_PRODUCT_SERVICE_URL")
 	FrontendURL = os.Getenv("ECOM_PRODUCT_SERVICE_FRONTEND_URL")
 	AccountServiceURL = os.Getenv("ECOM_PRODUCT_SERVICE_ACCOUNT_SERVICE_URL")
 
